@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Francis Louie M. Rosal — customer service, virtual assistance, operations support and data annotation.">
+  <meta name="theme-color" content="#10243a">
+  <title>Francis Louie M. Rosal | Professional Portfolio</title>
+  <style>
+    :root {
+      --navy:#10243a; --navy2:#193653; --ink:#17283a; --muted:#647386;
+      --paper:#f5f7fa; --white:#fff; --line:#e2e8ef; --accent:#d9a85b;
+      --soft:#eaf0f6; --shadow:0 18px 50px rgba(16,36,58,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65}
+    a{color:inherit}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(16,36,58,.96);backdrop-filter:blur(10px);color:#fff}
+    .nav{max-width:1120px;margin:auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:.04em;font-size:.95rem}
+    .navlinks{display:flex;gap:22px;flex-wrap:wrap}
+    .navlinks a{text-decoration:none;color:#e7edf4;font-size:.9rem}
+    .navlinks a:hover{color:var(--accent)}
+    .hero{background:linear-gradient(125deg,var(--navy),var(--navy2));color:white;overflow:hidden}
+    .hero-inner{max-width:1120px;margin:auto;padding:76px 24px 82px;display:grid;grid-template-columns:1.5fr .8fr;align-items:center;gap:60px}
+    .eyebrow{color:#e9c88f;text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-size:.75rem}
+    h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;letter-spacing:-.045em;margin:14px 0 18px}
+    .hero p{color:#d9e3ed;max-width:650px;font-size:1.08rem;margin:0 0 26px}
+    .roleline{font-weight:700;color:#f0d7ad;letter-spacing:.04em}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;text-decoration:none;padding:12px 19px;border-radius:8px;font-weight:700;font-size:.92rem}
+    .btn-primary{background:var(--accent);color:#17283a}
+    .btn-outline{border:1px solid rgba(255,255,255,.55);color:white}
+    .portrait-wrap{justify-self:end;position:relative}
+    .portrait{width:min(290px,65vw);aspect-ratio:4/5;object-fit:cover;object-position:center 22%;border-radius:22px;border:5px solid rgba(255,255,255,.16);box-shadow:0 25px 65px rgba(0,0,0,.25)}
+    .portrait-wrap:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(233,200,143,.6);border-radius:22px;z-index:0}
+    .portrait{position:relative;z-index:1}
+    main{max-width:1120px;margin:auto;padding:0 24px}
+    section{padding:68px 0}
+    .section-kicker{color:#a97834;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:800}
+    h2{font-size:clamp(1.8rem,4vw,2.45rem);line-height:1.2;margin:8px 0 20px;color:var(--navy);letter-spacing:-.025em}
+    .lead{font-size:1.05rem;color:#526276;max-width:850px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:23px;box-shadow:0 7px 25px rgba(16,36,58,.035)}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:1.08rem}
+    .card p{margin:0;color:var(--muted);font-size:.94rem}
+    .chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+    .chip{background:var(--soft);color:#28445f;border:1px solid #dce5ee;padding:7px 11px;border-radius:999px;font-size:.86rem;font-weight:600}
+    .experience{display:grid;gap:15px;margin-top:28px}
+    .experience-item{background:#fff;border:1px solid var(--line);border-radius:13px;padding:22px 24px}
+    .experience-item h3{margin:0;color:var(--navy);font-size:1.08rem}
+    .experience-item .sub{color:#9a7138;font-weight:700;font-size:.87rem;margin:3px 0 10px}
+    ul{padding-left:20px;margin:9px 0 0;color:#58687a}
+    li{margin:4px 0}
+    .tools{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}
+    .tool{background:white;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+    .tool strong{display:block;color:var(--navy);margin-bottom:4px}
+    .sample-note{font-size:.9rem;color:#6a7786;background:#fff8ec;border-left:3px solid var(--accent);padding:13px 16px;border-radius:6px}
+    .sample-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+    .sample-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:22px}
+    .sample-card h3{margin:0 0 8px;color:var(--navy)}
+    .sample-card p{color:#5c6b7d;margin:0;font-size:.94rem}
+    .contact{background:var(--navy);color:white;border-radius:20px;padding:38px;margin:20px 0 70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .contact h2{color:white;margin:5px 0 10px}
+    .contact p{color:#d4deea;margin:0}
+    .contact a{color:#f0d7ad;text-decoration:none;font-weight:700}
+    footer{text-align:center;padding:25px;color:#778596;font-size:.85rem}
+    @media(max-width:760px){
+      .nav{align-items:flex-start;flex-direction:column}.navlinks{gap:13px}
+      .hero-inner{grid-template-columns:1fr;gap:35px;padding:56px 24px 64px}
+      .portrait-wrap{justify-self:start}.portrait{width:210px}
+      .grid{grid-template-columns:1fr}.tools,.sample-grid{grid-template-columns:1fr}
+      .contact{align-items:flex-start;flex-direction:column;padding:28px}
+      section{padding:52px 0}
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <div class="brand">FRANCIS ROSAL</div>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+      <a href="#samples">Work Samples</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Professional Portfolio</div>
+      <h1>Francis Louie<br>M. Rosal</h1>
+      <div class="roleline">CUSTOMER SERVICE · VIRTUAL ASSISTANCE · OPERATIONS SUPPORT</div>
+      <p>Reliable remote professional focused on helpful customer experiences, accurate administrative support, organized information management, and quality project-based work.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-outline" href="Francis_Rosal_Professional_Portfolio.pdf" target="_blank" rel="noopener">View portfolio PDF</a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="assets/profile.jpg" alt="Professional portrait of Francis Louie M. Rosal">
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="about">
+    <div class="section-kicker">A little about me</div>
+    <h2>Professional profile</h2>
+    <p class="lead">I am a reliable and adaptable remote professional with experience in customer support, operations support, administrative assistance, data entry, and project-based data annotation. I value clear communication, accuracy, professionalism, and consistent follow-through. I am comfortable working with digital tools, following detailed procedures, managing competing priorities, and completing assignments independently while meeting deadlines.</p>
+  </section>
+
+  <section id="skills">
+    <div class="section-kicker">What I bring</div>
+    <h2>Core skills and competencies</h2>
+    <div class="grid">
+      <article class="card"><h3>Customer Support</h3><p>Inbound call handling, customer inquiries, account concerns, troubleshooting support, active listening, empathy, and de-escalation.</p></article>
+      <article class="card"><h3>Administrative Support</h3><p>Documentation, data entry, recordkeeping, file organization, online research, and information management.</p></article>
+      <article class="card"><h3>Operations Support</h3><p>Following detailed procedures, managing priorities, supporting workflows, meeting deadlines, and working independently.</p></article>
+    </div>
+    <div class="chips">
+      <span class="chip">Customer Service</span><span class="chip">Data Entry</span><span class="chip">Documentation</span>
+      <span class="chip">Records Management</span><span class="chip">2D &amp; 3D Data Annotation</span>
+      <span class="chip">Labeling &amp; Segmentation</span><span class="chip">Online Research</span>
+      <span class="chip">Time Management</span><span class="chip">Quality &amp; Accuracy</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-kicker">Professional background</div>
+    <h2>Relevant experience</h2>
+    <div class="experience">
+      <article class="experience-item">
+        <h3>Customer Support Representative – Voice</h3>
+        <div class="sub">Customer Service</div>
+        <ul>
+          <li>Handled high-volume inbound customer calls while maintaining professionalism and accuracy.</li>
+          <li>Responded to customer inquiries, account concerns, troubleshooting issues, and service requests.</li>
+          <li>Used active listening and empathy to de-escalate challenging interactions and provide appropriate assistance.</li>
+          <li>Documented customer interactions and followed established procedures and quality guidelines.</li>
+        </ul>
+      </article>
+      <article class="experience-item">
+        <h3>Operations and Administrative Support</h3>
+        <div class="sub">Remote and project-based support</div>
+        <ul>
+          <li>Supported daily operational and administrative activities with attention to accuracy and productivity.</li>
+          <li>Performed data entry, documentation, and information management according to instructions.</li>
+          <li>Created, organized, updated, and maintained digital documents using Microsoft Office and Google Workspace.</li>
+          <li>Managed multiple assignments and deadlines while adapting to changing workflows.</li>
+        </ul>
+      </article>
+      <article class="experience-item">
+        <h3>Independent Data Annotation Contractor</h3>
+        <div class="sub">Remotasks / Scale AI Projects · Project-based</div>
+        <ul>
+          <li>Completed data annotation, labeling, and segmentation tasks based on project-specific guidelines.</li>
+          <li>Worked with 2D and 3D annotation and segmentation tasks.</li>
+          <li>Adapted to varying project requirements and quality expectations.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="section-kicker">Digital toolkit</div>
+    <h2>Tools and platforms</h2>
+    <div class="tools">
+      <div class="tool"><strong>Office and productivity</strong>Microsoft Word, Excel, PowerPoint; Google Docs, Sheets, Drive</div>
+      <div class="tool"><strong>Communication</strong>Gmail, Google Meet, Zoom, Microsoft Teams</div>
+      <div class="tool"><strong>Creative tools</strong>Canva and CapCut</div>
+      <div class="tool"><strong>Work areas</strong>Customer support, data entry, online research, document management, and data annotation platforms</div>
+    </div>
+  </section>
+
+  <section id="samples">
+    <div class="section-kicker">How I work</div>
+    <h2>Demonstration work samples</h2>
+    <p class="sample-note">The examples below are illustrative demonstrations created for this portfolio. They are not presented as actual client work or confidential company deliverables.</p>
+    <div class="sample-grid">
+      <article class="sample-card"><h3>Customer email response</h3><p>“Thank you for contacting us. I understand that you would like an update on your service request. I would be happy to assist. I will review the information available and check the current status. Thank you for your patience.”</p></article>
+      <article class="sample-card"><h3>Customer call workflow</h3><p>Greet professionally, verify identity according to policy, listen and clarify, review relevant information, explain next steps, confirm whether more help is needed, and document the outcome accurately.</p></article>
+      <article class="sample-card"><h3>Data entry quality checklist</h3><p>Check source documents, enter information in the correct fields, verify spelling and numerical values, compare entries against the source, flag unclear information, and organize records securely.</p></article>
+      <article class="sample-card"><h3>Remote work approach</h3><p>Follow written instructions carefully, organize tasks by priority, communicate progress clearly, check work for accuracy, and meet agreed deadlines.</p></article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <div class="eyebrow">Let's connect</div>
+        <h2>Interested in working together?</h2>
+        <p>For remote opportunities, interviews, or further information, please reach out.</p>
+      </div>
+      <div>
+        <p><strong>Email</strong><br><a href="mailto:nezukomeme@gmail.com">nezukomeme@gmail.com</a></p>
+        <p style="margin-top:12px"><strong>Phone</strong><br><a href="tel:+639569364195">+63 956 936 4195</a></p>
+        <p style="margin-top:12px"><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/francis-louie-rosal-83a688244/" target="_blank" rel="noopener">View LinkedIn profile</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year">2026</span> Francis Louie M. Rosal · Professional Portfolio</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
